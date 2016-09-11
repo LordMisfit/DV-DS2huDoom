@@ -47,7 +47,7 @@ ACTOR Fairy1New : Fairy1 replaces Fairy1 31134
 	FAR1 A 0 A_Look
     goto Spawn+1
   See:
-    FAR1 A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    FAR1 A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     FAR1 A 0 A_unsetinvulnerable
     FAR1 ABC 3 A_Chase
     Loop
@@ -159,7 +159,7 @@ ACTOR Fairy2New : Fairy2 replaces Fairy2 31135
 	FAR1 A 0 A_Look
     goto Spawn+1
   See:
-    FAR1 A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    FAR1 A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     FAR1 A 0 A_unsetinvulnerable
     FAR1 ABC 3 A_Chase
     Loop
@@ -284,7 +284,7 @@ ACTOR Fairy3New : Fairy3 replaces Fairy3 31151
 	FAR2 A 0 A_Look
     goto Spawn+1
   See:
-    FAR2 A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    FAR2 A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     FAR2 A 0 A_unsetinvulnerable
     FAR2 ABC 3 A_Chase
     Loop
@@ -426,7 +426,7 @@ ACTOR Fairy4New : Fairy4 replaces Fairy4 31150
 	FAR2 A 0 A_Look
     goto Spawn+1
   See:
-    FAR2 A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    FAR2 A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     FAR2 A 0 A_unsetinvulnerable
     FAR2 ABC 3 A_Chase
     Loop
@@ -578,7 +578,7 @@ ACTOR Fairy5New : Fairy5 replaces Fairy5 31157
 	FAR3 A 0 A_Look
     goto Spawn+1
   See:
-    FAR3 A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    FAR3 A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     FAR3 A 0 A_unsetinvulnerable
     FAR3 ABC 3 A_Chase
     Loop
@@ -713,7 +713,7 @@ ACTOR RumiaMidBossNew : RumiaMidBoss replaces RumiaMidBoss 31200
     goto Spawn+1
   See:
     RMIA A 0 Thing_ChangeTID(0,1222)
-    RMIA A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    RMIA A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     RMIA A 0 A_unsetinvulnerable
     RMIA F 2 A_Chase
     Loop
@@ -873,7 +873,7 @@ ACTOR RumiaNew : Rumia replaces Rumia 31199
     goto Spawn+1
   See:
     RMIA A 0 Thing_ChangeTID(0,1222)
-    RMIA A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    RMIA A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     RMIA A 0 A_unsetinvulnerable
     RMIA F 2 A_Chase
     Loop
@@ -1079,7 +1079,7 @@ ACTOR DaiyouseiNew : Daiyousei replaces Daiyousei 31153
     goto Spawn+1
   See:
     DAIY A 0 Thing_ChangeTID(0,1222)
-    DAIY A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    DAIY A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     DAIY A 0 A_unsetinvulnerable
     DAIY ABCB 2 A_Chase
     Loop
@@ -1284,7 +1284,7 @@ ACTOR CirnoNew : Cirno replaces Cirno 31154
     goto Spawn+1
   See:
     CIRN A 0 Thing_ChangeTID(0,1222)
-    CIRN A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    CIRN A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     CIRN A 0 A_unsetinvulnerable
     CIRN AF 2 A_Chase
     Loop
@@ -1499,7 +1499,7 @@ ACTOR MeilingMidBossNew : MeilingMidBoss replaces MeilingMidBoss 31155
     goto Spawn+1
   See:
     MEIL A 0 Thing_ChangeTID(0,1222)
-    MEIL A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    MEIL A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     MEIL AB 2 A_Chase
     Loop
   Pain:
@@ -1659,7 +1659,7 @@ ACTOR MeilingNew : Meiling replaces Meiling 31156
     goto Spawn+1
   See:
     MEIL A 0 Thing_ChangeTID(0,1222)
-    MEIL A 0 ACS_NamedExecuteAlways("MonsterStatsHP_ATK_DEF_SPD",0,0)
+    MEIL A 0 ACS_NamedExecuteAlways("RefreshStealthInfo",0,0)
     MEIL AB 2 A_Chase
     Loop
   Pain:
