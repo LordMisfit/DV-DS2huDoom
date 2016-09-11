@@ -1,0 +1,3 @@
+#include "decorate/touhoudoomoriginal.dec"
+#include "decorate/touhoudoommonsters.dec"
+#include "decorate/touhoudoomitems.dec"
