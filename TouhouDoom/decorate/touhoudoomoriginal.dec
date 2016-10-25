@@ -1,7 +1,7 @@
 actor ImpSpawner : RandomSpawner
 {
 	+ISMONSTER
-	DropItem "DoomImp" 	256 12
+	DropItem "DoomImpSpawner" 	256 12
 	DropItem "Devil" 	256 4
 	DropItem "STDarkImp" 	256 4
 	DropItem "PyroImp" 	256 2
@@ -13,16 +13,14 @@ actor ImpSpawner : RandomSpawner
 actor PinkySpawner : RandomSpawner
 {
 	+ISMONSTER
-	DropItem "BloodDemonClone" 	256 3
-	DropItem "Demon" 	256 12
-	DropItem "Spectre" 	256 4
+	DropItem "DemonSpawner" 256
 }
 
 actor EasyEnemySpawner : RandomSpawner
 {
 	+ISMONSTER
-	DropItem "DoomImp" 	256 20
-	DropItem "Demon" 	256 12
+	DropItem "DoomImpSpawner" 	256 20
+	DropItem "DemonSpawner" 	256 12
 	DropItem "Devil" 	256 6
 	DropItem "STDarkImp" 	256 5
 	DropItem "PyroImp" 	256 3
@@ -34,9 +32,9 @@ actor EasyEnemySpawner : RandomSpawner
 actor MediumEnemySpawner : RandomSpawner
 {
 	+ISMONSTER
-	DropItem "Cacodemon" 	256 12
+	DropItem "CacodemonSpawner" 	256 12
 	DropItem "EnhancedCacodemon" 	256 5
-	DropItem "CacolanternClone" 	256 2
+	DropItem "Cacolantern" 	256 2
 	DropItem "Revenant" 	256 2
 	DropItem "Revenant2" 	256 1
 	DropItem "HellKnight" 	256 2
@@ -58,7 +56,7 @@ actor MediumHellNobleSpawner : RandomSpawner
 	DropItem "BaronOfHell" 	256 10
 	DropItem "CyberBaron" 	256 2
 	DropItem "InfernoViscount" 	256 1
-	DropItem "BelphegorClone" 	256 2
+	DropItem "Belphegor" 	256 2
 	DropItem "LordofHeresy" 	256 3
 }
 
@@ -67,7 +65,7 @@ actor HardHellNobleSpawner : RandomSpawner
 	+ISMONSTER
 	DropItem "InfernoViscount" 	256 5
 	DropItem "LordofHeresy" 	256 10
-	DropItem "BelphegorClone" 	256 10
+	DropItem "Belphegor" 	256 10
 	DropItem "Cybruiser" 	256 1
 	DropItem "CyberBaron" 	256 3
 }
@@ -76,16 +74,16 @@ actor FatsoSpawner : RandomSpawner
 {
 	+ISMONSTER
 	DropItem "Fatso" 	256 10
-	DropItem "D3Mancubus" 	256 4
-	DropItem "Hectebus" 	256 3
+	DropItem "Hectebus" 	256 4
+	DropItem "Daedabus" 	256 3
 }
 
 actor CacoSpawner : RandomSpawner
 {
 	+ISMONSTER
-	DropItem "Cacodemon" 	256 10
+	DropItem "CacodemonSpawner" 	256 10
 	DropItem "EnhancedCacodemon" 	256 6
-	DropItem "CacolanternClone" 	256 1
+	DropItem "Cacolantern" 	256 1
 }
 
 actor ArachSpawner : RandomSpawner
@@ -14781,7 +14779,8 @@ ACTOR MWeapBloodScourge1 : MWeapBloodScourge 31102
    }
 }
 
-ACTOR EtherealCrossbow : Weapon replaces Crossbow 31099
+//
+ACTOR EtherealCrossbow : Weapon replaces Crossbow // 31099
 {
   Weapon.AmmoUse 1
   Weapon.AmmoGive 10
@@ -15365,9 +15364,9 @@ Actor FantasyWand : Weapon 31124
   red:
     LTBR F 0 A_PlayWeaponSound("Weapons/Lightbringer/Fire") 
     LTBR F 3 Bright A_PlaySoundEx("Weapons/SunStaffhit", "SoundSlot7", 0)
-    LTBR G 3 Bright Offset (0,34) A_FireCustomMissile("FantasySealRed", 0, 1, 0, 0)
-    LTBR H 3 Bright Offset (0,36)
-    LTBR I 3 Bright Offset (0,32)
+    LTBR G 3 Bright offset(0,34) A_FireCustomMissile("FantasySealRed", 0, 1, 0, 0)
+    LTBR H 3 Bright offset(0,36)
+    LTBR I 3 Bright offset(0,32)
     LTBR BCD 3 Bright
     LTBR A 0 A_Refire
     LTBR I 0 A_JumpIfInventory("GMana", 1, 1)
@@ -15377,9 +15376,9 @@ Actor FantasyWand : Weapon 31124
   green:
     LTBR F 0 A_PlayWeaponSound("Weapons/Lightbringer/Fire") 
     LTBR F 3 Bright A_PlaySoundEx("Weapons/SunStaffhit", "SoundSlot7", 0)
-    LTBR G 3 Bright Offset (0,34) A_FireCustomMissile("FantasySealGreen", 0, 1, 0, 0)
-    LTBR H 3 Bright Offset (0,36)
-    LTBR I 3 Bright Offset (0,32)
+    LTBR G 3 Bright offset(0,34) A_FireCustomMissile("FantasySealGreen", 0, 1, 0, 0)
+    LTBR H 3 Bright offset(0,36)
+    LTBR I 3 Bright offset(0,32)
     LTBR BCD 3 Bright
     LTBR A 0 A_Refire
     LTBR I 0 A_JumpIfInventory("GMana", 1, 1)
@@ -15389,9 +15388,9 @@ Actor FantasyWand : Weapon 31124
   yellow:
     LTBR F 0 A_PlayWeaponSound("Weapons/Lightbringer/Fire") 
     LTBR F 3 Bright A_PlaySoundEx("Weapons/SunStaffhit", "SoundSlot7", 0)
-    LTBR G 3 Bright Offset (0,34) A_FireCustomMissile("FantasySealYellow", 0, 1, 0, 0)
-    LTBR H 3 Bright Offset (0,36)
-    LTBR I 3 Bright Offset (0,32)
+    LTBR G 3 Bright offset(0,34) A_FireCustomMissile("FantasySealYellow", 0, 1, 0, 0)
+    LTBR H 3 Bright offset(0,36)
+    LTBR I 3 Bright offset(0,32)
     LTBR BCD 3 Bright
     LTBR A 0 A_Refire
     LTBR I 0 A_JumpIfInventory("GMana", 1, 1)
@@ -15401,9 +15400,9 @@ Actor FantasyWand : Weapon 31124
   blue:
     LTBR F 0 A_PlayWeaponSound("Weapons/Lightbringer/Fire") 
     LTBR F 3 Bright A_PlaySoundEx("Weapons/SunStaffhit", "SoundSlot7", 0)
-    LTBR G 3 Bright Offset (0,34) A_FireCustomMissile("FantasySealBlue", 0, 1, 0, 0)
-    LTBR H 3 Bright Offset (0,36)
-    LTBR I 3 Bright Offset (0,32)
+    LTBR G 3 Bright offset(0,34) A_FireCustomMissile("FantasySealBlue", 0, 1, 0, 0)
+    LTBR H 3 Bright offset(0,36)
+    LTBR I 3 Bright offset(0,32)
     LTBR BCD 3 Bright
     LTBR A 0 A_Refire
     LTBR I 0 A_JumpIfInventory("GMana", 1, 1)
@@ -15672,9 +15671,9 @@ ACTOR SapphireStaff : Weapon
     Loop
   Fire:
     SPW2 A 2
-    SPW2 B 4 Bright Offset(0, 48) A_FireCustomMissile("MageWandMissile",random(-1, 1))
-    SPW2 A 2 Offset(0, 40)
-    SPW2 A 2 Offset(0, 36) A_ReFire
+    SPW2 B 4 Bright Offset(0,48) A_FireCustomMissile("MageWandMissile",random(-1, 1))
+    SPW2 A 2 Offset(0,40)
+    SPW2 A 2 Offset(0,36) A_ReFire
     Goto Ready
   }
 }
@@ -15706,15 +15705,15 @@ ACTOR UltimateHellStaff : Weapon
     Loop
   Fire:
     HLS2 D 1
-    HLS2 E 2 Bright Offset(0, 48) A_FireCustomMissile("HornRodFX13")
-    HLS2 D 1 Offset(0, 40)
-    HLS2 D 1 Offset(0, 36) A_ReFire
+    HLS2 E 2 Bright Offset(0,48) A_FireCustomMissile("HornRodFX13")
+    HLS2 D 1 Offset(0,40)
+    HLS2 D 1 Offset(0,36) A_ReFire
     Goto Ready
   AltFire:
 	HLS2 ABCD 5
-	HLS2 G 4 Bright Offset(0, 48) A_FireCustomMissile("HellStaffLightning")
-	HLS2 D 2 Offset(0, 40)
-    HLS2 D 2 Offset(0, 36) A_ReFire
+	HLS2 G 4 Bright Offset(0,48) A_FireCustomMissile("HellStaffLightning")
+	HLS2 D 2 Offset(0,40)
+    HLS2 D 2 Offset(0,36) A_ReFire
 	Goto Ready
   }
 }
